@@ -1,0 +1,56 @@
+.atlas-insight-card {
+  padding: var(--atlas-space-3) 0;
+  border-bottom: 1px solid var(--atlas-border);
+}
+
+.atlas-insight-card:last-child {
+  border-bottom: none;
+}
+
+.atlas-insight-card__top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--atlas-space-2);
+  margin-bottom: var(--atlas-space-2);
+}
+
+.atlas-insight-card__direction {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: var(--atlas-font-mono);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.atlas-insight-card__direction--positive {
+  color: var(--atlas-positive);
+}
+
+.atlas-insight-card__direction--negative {
+  color: var(--atlas-risk);
+}
+
+.atlas-insight-card__direction--neutral {
+  color: var(--atlas-ink-muted);
+}
+
+.atlas-insight-card__confidence {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--atlas-ink-faint);
+  text-transform: capitalize;
+}
+
+.atlas-insight-card__headline {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--atlas-ink);
+  margin-bottom: 2px;
+}
+
+.atlas-insight-card__driver {
+  font-size: 12px;
+  color: var(--atlas-ink-muted);
+}

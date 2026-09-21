@@ -1,0 +1,6 @@
+.atlas-revenue-forecast-section__note {
+  margin-top: var(--atlas-space-2);
+  font-size: 11px;
+  color: var(--atlas-ink-faint);
+  line-height: 1.5;
+}

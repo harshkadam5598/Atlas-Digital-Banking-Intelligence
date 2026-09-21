@@ -1,0 +1,16 @@
+.atlas-growth-funnel-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--atlas-space-4);
+}
+
+.atlas-growth-funnel-section__headline {
+  max-width: 280px;
+  margin-bottom: var(--atlas-space-1);
+}
+
+.atlas-growth-funnel-section__note {
+  font-size: 11px;
+  color: var(--atlas-ink-faint);
+  line-height: 1.5;
+}

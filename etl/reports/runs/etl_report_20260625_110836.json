@@ -1,0 +1,263 @@
+{
+  "run_id": "run_20260625_110807_59eaf1",
+  "source_version": "v001_20260625_110807_seed42_etl_input",
+  "status": "PASS_WITH_WARNINGS",
+  "started_at": "2026-06-25T11:08:07.258872",
+  "completed_at": "2026-06-25T11:08:36.775235",
+  "elapsed_seconds": 29.5,
+  "pipeline_metrics": {
+    "rows_extracted": 81046,
+    "rows_transformed": 79774,
+    "rows_loaded": 79774,
+    "rows_rejected": 0
+  },
+  "data_quality": {
+    "score": 12.4,
+    "checks_passed": 180,
+    "checks_failed": 1272,
+    "total_checks": 1452
+  },
+  "stages": {
+    "extract": {
+      "rows_in": 81046,
+      "rows_out": 81046,
+      "rows_rejected": 0,
+      "rejection_rate": 0.0,
+      "duration_s": 0.165,
+      "passed": true,
+      "warnings": [],
+      "errors": []
+    },
+    "transform": {
+      "rows_in": 81046,
+      "rows_out": 79774,
+      "rows_rejected": 0,
+      "rejection_rate": 0.0,
+      "duration_s": 29.164,
+      "passed": true,
+      "warnings": [],
+      "errors": []
+    },
+    "transform_dim_customer": {
+      "rows_in": 2000,
+      "rows_out": 2000,
+      "rows_rejected": 0,
+      "rejection_rate": 0.0,
+      "duration_s": 0.779,
+      "passed": true,
+      "warnings": [],
+      "errors": []
+    },
+    "transform_fact_journey": {
+      "rows_in": 2000,
+      "rows_out": 2000,
+      "rows_rejected": 0,
+      "rejection_rate": 0.0,
+      "duration_s": 0.791,
+      "passed": true,
+      "warnings": [],
+      "errors": []
+    },
+    "transform_fact_txn": {
+      "rows_in": 19399,
+      "rows_out": 19399,
+      "rows_rejected": 0,
+      "rejection_rate": 0.0,
+      "duration_s": 7.021,
+      "passed": true,
+      "warnings": [],
+      "errors": []
+    },
+    "transform_fact_events": {
+      "rows_in": 33433,
+      "rows_out": 33433,
+      "rows_rejected": 0,
+      "rejection_rate": 0.0,
+      "duration_s": 12.539,
+      "passed": true,
+      "warnings": [
+        "[TRANSFORM:fact_product_events] 1272 duplicate events dropped"
+      ],
+      "errors": []
+    },
+    "transform_fact_revenue": {
+      "rows_in": 17772,
+      "rows_out": 17772,
+      "rows_rejected": 0,
+      "rejection_rate": 0.0,
+      "duration_s": 6.226,
+      "passed": true,
+      "warnings": [],
+      "errors": []
+    },
+    "transform_fact_marketing": {
+      "rows_in": 2000,
+      "rows_out": 2000,
+      "rows_rejected": 0,
+      "rejection_rate": 0.0,
+      "duration_s": 0.688,
+      "passed": true,
+      "warnings": [],
+      "errors": []
+    },
+    "transform_fact_support": {
+      "rows_in": 1077,
+      "rows_out": 1077,
+      "rows_rejected": 0,
+      "rejection_rate": 0.0,
+      "duration_s": 0.366,
+      "passed": true,
+      "warnings": [],
+      "errors": []
+    },
+    "transform_fact_kyc": {
+      "rows_in": 2093,
+      "rows_out": 2093,
+      "rows_rejected": 0,
+      "rejection_rate": 0.0,
+      "duration_s": 0.751,
+      "passed": true,
+      "warnings": [],
+      "errors": []
+    },
+    "load_staging": {
+      "rows_in": 0,
+      "rows_out": 79774,
+      "rows_rejected": 0,
+      "rejection_rate": 0.0,
+      "duration_s": 0.14,
+      "passed": true,
+      "warnings": [],
+      "errors": []
+    },
+    "validate": {
+      "rows_in": 0,
+      "rows_out": 0,
+      "rows_rejected": 0,
+      "rejection_rate": 0.0,
+      "duration_s": 0.037,
+      "passed": true,
+      "warnings": [],
+      "errors": []
+    }
+  },
+  "warnings": [
+    "[TRANSFORM:fact_product_events] 1272 duplicate events dropped",
+    "[LOAD:postgres] PostgreSQL not reachable \u2014 skipping DB load (staging Parquet written)"
+  ],
+  "errors": [],
+  "audit_log": [
+    {
+      "ts": "2026-06-25T11:08:07.265901",
+      "table": "dim_customer",
+      "action": "EXTRACT",
+      "rows": 2000,
+      "detail": "file=dim_customer.parquet cols=24 violations=0"
+    },
+    {
+      "ts": "2026-06-25T11:08:07.270749",
+      "table": "fact_customer_journey",
+      "action": "EXTRACT",
+      "rows": 2000,
+      "detail": "file=fact_customer_journey.parquet cols=23 violations=0"
+    },
+    {
+      "ts": "2026-06-25T11:08:07.280908",
+      "table": "fact_transactions",
+      "action": "EXTRACT",
+      "rows": 19399,
+      "detail": "file=fact_transactions.parquet cols=14 violations=0"
+    },
+    {
+      "ts": "2026-06-25T11:08:07.404517",
+      "table": "fact_product_events",
+      "action": "EXTRACT",
+      "rows": 34705,
+      "detail": "file=fact_product_events.parquet cols=7 violations=0"
+    },
+    {
+      "ts": "2026-06-25T11:08:07.412955",
+      "table": "fact_revenue",
+      "action": "EXTRACT",
+      "rows": 17772,
+      "detail": "file=fact_revenue.parquet cols=10 violations=0"
+    },
+    {
+      "ts": "2026-06-25T11:08:07.416645",
+      "table": "fact_marketing",
+      "action": "EXTRACT",
+      "rows": 2000,
+      "detail": "file=fact_marketing.parquet cols=8 violations=0"
+    },
+    {
+      "ts": "2026-06-25T11:08:07.420005",
+      "table": "fact_support",
+      "action": "EXTRACT",
+      "rows": 1077,
+      "detail": "file=fact_support.parquet cols=12 violations=0"
+    },
+    {
+      "ts": "2026-06-25T11:08:07.423305",
+      "table": "fact_kyc_events",
+      "action": "EXTRACT",
+      "rows": 2093,
+      "detail": "file=fact_kyc_events.parquet cols=10 violations=0"
+    },
+    {
+      "ts": "2026-06-25T11:08:36.601135",
+      "table": "dim_customer",
+      "action": "LOAD_STAGING",
+      "rows": 2000,
+      "detail": "data/staging/dim_customer.parquet"
+    },
+    {
+      "ts": "2026-06-25T11:08:36.608695",
+      "table": "fact_customer_journey",
+      "action": "LOAD_STAGING",
+      "rows": 2000,
+      "detail": "data/staging/fact_customer_journey.parquet"
+    },
+    {
+      "ts": "2026-06-25T11:08:36.636191",
+      "table": "fact_transactions",
+      "action": "LOAD_STAGING",
+      "rows": 19399,
+      "detail": "data/staging/fact_transactions.parquet"
+    },
+    {
+      "ts": "2026-06-25T11:08:36.699473",
+      "table": "fact_product_events",
+      "action": "LOAD_STAGING",
+      "rows": 33433,
+      "detail": "data/staging/fact_product_events.parquet"
+    },
+    {
+      "ts": "2026-06-25T11:08:36.714679",
+      "table": "fact_revenue",
+      "action": "LOAD_STAGING",
+      "rows": 17772,
+      "detail": "data/staging/fact_revenue.parquet"
+    },
+    {
+      "ts": "2026-06-25T11:08:36.718911",
+      "table": "fact_marketing",
+      "action": "LOAD_STAGING",
+      "rows": 2000,
+      "detail": "data/staging/fact_marketing.parquet"
+    },
+    {
+      "ts": "2026-06-25T11:08:36.723025",
+      "table": "fact_support",
+      "action": "LOAD_STAGING",
+      "rows": 1077,
+      "detail": "data/staging/fact_support.parquet"
+    },
+    {
+      "ts": "2026-06-25T11:08:36.727633",
+      "table": "fact_kyc_events",
+      "action": "LOAD_STAGING",
+      "rows": 2093,
+      "detail": "data/staging/fact_kyc_events.parquet"
+    }
+  ]
+}

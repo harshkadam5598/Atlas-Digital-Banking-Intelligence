@@ -1,0 +1,30 @@
+.atlas-risk-panel__summary {
+  font-family: var(--atlas-font-mono);
+  font-size: 12px;
+  color: var(--atlas-ink-muted);
+  margin-bottom: var(--atlas-space-4);
+}
+
+.atlas-risk-panel__dot {
+  margin: 0 var(--atlas-space-2);
+  color: var(--atlas-ink-faint);
+}
+
+.atlas-risk-panel__section + .atlas-risk-panel__section {
+  margin-top: var(--atlas-space-5);
+}
+
+.atlas-risk-panel__heading {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--atlas-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: var(--atlas-space-2);
+}
+
+.atlas-risk-panel__empty {
+  font-size: 13px;
+  color: var(--atlas-ink-faint);
+  padding: var(--atlas-space-3) 0;
+}

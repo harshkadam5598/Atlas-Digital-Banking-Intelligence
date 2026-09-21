@@ -1,0 +1,27 @@
+.atlas-shell {
+  min-height: 100%;
+}
+
+.atlas-shell__body {
+  margin-left: var(--atlas-sidebar-width);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.atlas-shell__content {
+  flex: 1;
+  padding: var(--atlas-space-5) var(--atlas-space-6);
+  max-width: 1280px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .atlas-shell__body {
+    margin-left: 0;
+  }
+
+  .atlas-shell__content {
+    padding: var(--atlas-space-4);
+  }
+}

@@ -1,0 +1,16 @@
+.atlas-segment-section__gap-note {
+  font-size: 12px;
+  color: var(--atlas-caution);
+  background: var(--atlas-caution-soft);
+  border-radius: var(--atlas-radius);
+  padding: var(--atlas-space-2) var(--atlas-space-3);
+  margin-bottom: var(--atlas-space-3);
+  line-height: 1.5;
+}
+
+.atlas-segment-section__caption {
+  font-family: var(--atlas-font-mono);
+  font-size: 12px;
+  color: var(--atlas-ink-muted);
+  margin-bottom: var(--atlas-space-3);
+}

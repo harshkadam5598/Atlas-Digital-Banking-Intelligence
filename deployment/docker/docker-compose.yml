@@ -1,0 +1,95 @@
+# ============================================================
+# Atlas – Digital Banking Intelligence Platform
+# Docker Compose – Local Development Stack
+# ============================================================
+
+version: "3.9"
+
+services:
+
+  # ─── PostgreSQL Data Warehouse ──────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: atlas_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-atlas_db}
+      POSTGRES_USER: ${POSTGRES_USER:-atlas_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-atlas_password}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - atlas_postgres_data:/var/lib/postgresql/data
+      # Fix (Phase 1A): the previous mount (../../sql/schema only) left
+      # indexes and analytics views out of a fresh database — the views
+      # are what every API endpoint queries. init-db.sh now applies all
+      # three in the correct order; see that file for details. Neither
+      # volume defines new SQL — both just make the existing sql/ files
+      # available to the init script.
+      - ../../sql:/atlas-sql:ro
+      - ./init-db.sh:/docker-entrypoint-initdb.d/10-init-db.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-atlas_user} -d ${POSTGRES_DB:-atlas_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─── Redis Cache (KPI & Analytics Layer) ────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: atlas_redis
+    restart: unless-stopped
+    command: >
+      redis-server
+      --requirepass ${REDIS_PASSWORD:-atlas_redis_password}
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+      --save 900 1
+      --save 300 10
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - atlas_redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "--no-auth-warning", "-a", "${REDIS_PASSWORD:-atlas_redis_password}", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ─── Atlas API Server ───────────────────────────────────────
+  api:
+    build:
+      context: ../..
+      dockerfile: deployment/docker/Dockerfile
+    container_name: atlas_api
+    restart: unless-stopped
+    env_file:
+      - ../../.env
+    environment:
+      POSTGRES_HOST: postgres
+      REDIS_HOST: redis
+    ports:
+      - "${ATLAS_PORT:-8000}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ../../data:/app/data
+      - ../../logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import httpx; httpx.get('http://localhost:8000/health').raise_for_status()"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  atlas_postgres_data:
+    driver: local
+  atlas_redis_data:
+    driver: local
+
+networks:
+  default:
+    name: atlas_network

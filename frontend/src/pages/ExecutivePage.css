@@ -1,0 +1,27 @@
+.atlas-executive-page__kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--atlas-space-3);
+}
+
+.atlas-executive-page__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--atlas-space-5);
+}
+
+@media (max-width: 1024px) {
+  .atlas-executive-page__kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .atlas-executive-page__kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .atlas-executive-page__split {
+    grid-template-columns: 1fr;
+  }
+}

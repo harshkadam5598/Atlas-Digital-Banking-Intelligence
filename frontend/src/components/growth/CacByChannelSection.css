@@ -1,0 +1,16 @@
+.atlas-cac-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--atlas-space-2);
+}
+
+.atlas-cac-section__headline {
+  max-width: 280px;
+  margin-bottom: var(--atlas-space-1);
+}
+
+.atlas-cac-section__note {
+  font-size: 11px;
+  color: var(--atlas-ink-faint);
+  line-height: 1.5;
+}

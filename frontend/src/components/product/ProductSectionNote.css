@@ -1,0 +1,12 @@
+.atlas-product-section-note {
+  margin-top: var(--atlas-space-2);
+  font-family: var(--atlas-font-mono);
+  font-size: 12px;
+  color: var(--atlas-ink-muted);
+}
+
+.atlas-product-section-note--muted {
+  font-family: var(--atlas-font-ui);
+  font-size: 11px;
+  color: var(--atlas-ink-faint);
+}

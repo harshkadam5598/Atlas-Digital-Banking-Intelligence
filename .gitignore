@@ -1,0 +1,71 @@
+# ─── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+build/lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ─── Virtual Environments ─────────────────────────────────────
+.env
+.venv
+env/
+venv/
+ENV/
+
+# ─── Environment (SECURITY – never commit) ───────────────────
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# ─── IDE ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── Testing ─────────────────────────────────────────────────
+.pytest_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# ─── Data (large generated files) ────────────────────────────
+data/raw/*.csv
+data/raw/*.parquet
+data/staging/*.csv
+data/staging/*.parquet
+data/analytics/*.csv
+data/analytics/*.parquet
+
+# ─── Logs ─────────────────────────────────────────────────────
+logs/
+*.log
+
+# ─── Docker ──────────────────────────────────────────────────
+.docker/
+
+# ─── Frontend (Node/Vite) ──────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/node_modules/
+*.tsbuildinfo
+.npm/
+
+# ─── macOS ───────────────────────────────────────────────────
+.DS_Store

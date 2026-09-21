@@ -1,0 +1,290 @@
+{
+  "run_id": "20260628_182557_02bae40c",
+  "source_version": "v003_20260626_055700_seed42_sprint3_approved",
+  "started_at": "2026-06-28T18:25:57.363563",
+  "elapsed_seconds": 22.47,
+  "overall_status": "PASSED",
+  "data_quality_score": 100.0,
+  "summary": {
+    "rows_extracted": 81046,
+    "rows_transformed": 81046,
+    "rows_loaded": 81046,
+    "rows_rejected": 0,
+    "dq_checks_passed": 101,
+    "dq_checks_failed": 0
+  },
+  "stages": {
+    "extract": {
+      "rows_in": 81046,
+      "rows_out": 81046,
+      "rows_rejected": 0,
+      "duration_s": 0.501,
+      "status": "PASS",
+      "warnings": [],
+      "errors": [],
+      "checks_passed": 8,
+      "checks_failed": 0
+    },
+    "transform": {
+      "rows_in": 81046,
+      "rows_out": 81046,
+      "rows_rejected": 0,
+      "duration_s": 1.01,
+      "status": "PASS",
+      "warnings": [],
+      "errors": [],
+      "checks_passed": 6,
+      "checks_failed": 0
+    },
+    "load": {
+      "rows_in": 81046,
+      "rows_out": 81046,
+      "rows_rejected": 0,
+      "duration_s": 20.573,
+      "status": "PASS",
+      "warnings": [],
+      "errors": [],
+      "checks_passed": 0,
+      "checks_failed": 0
+    },
+    "validate": {
+      "rows_in": 0,
+      "rows_out": 0,
+      "rows_rejected": 0,
+      "duration_s": 0.092,
+      "status": "PASS",
+      "warnings": [],
+      "errors": [],
+      "checks_passed": 87,
+      "checks_failed": 0
+    }
+  },
+  "warnings": [],
+  "errors": [],
+  "audit_log": [
+    {
+      "ts": "2026-06-28T18:25:57.431143",
+      "table": "dim_customer",
+      "action": "extract",
+      "rows": 2000,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:57.453484",
+      "table": "fact_customer_journey",
+      "action": "extract",
+      "rows": 2000,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:57.506836",
+      "table": "fact_transactions",
+      "action": "extract",
+      "rows": 19399,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:57.824404",
+      "table": "fact_product_events",
+      "action": "extract",
+      "rows": 34705,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:57.853978",
+      "table": "fact_revenue",
+      "action": "extract",
+      "rows": 17772,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:57.862139",
+      "table": "fact_marketing",
+      "action": "extract",
+      "rows": 2000,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:57.868658",
+      "table": "fact_support",
+      "action": "extract",
+      "rows": 1077,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:57.879767",
+      "table": "fact_kyc_events",
+      "action": "extract",
+      "rows": 2093,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:57.953779",
+      "table": "dim_customer",
+      "action": "transform",
+      "rows": 2000,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:57.990055",
+      "table": "fact_customer_journey",
+      "action": "transform",
+      "rows": 2000,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:58.175373",
+      "table": "fact_transactions",
+      "action": "transform",
+      "rows": 19399,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:58.690343",
+      "table": "fact_product_events",
+      "action": "transform",
+      "rows": 34705,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:58.791250",
+      "table": "fact_revenue",
+      "action": "transform",
+      "rows": 17772,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:58.813047",
+      "table": "fact_marketing",
+      "action": "transform",
+      "rows": 2000,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:58.861102",
+      "table": "fact_support",
+      "action": "transform",
+      "rows": 1077,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:58.889600",
+      "table": "fact_kyc_events",
+      "action": "transform",
+      "rows": 2093,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:59.167499",
+      "table": "staging",
+      "action": "write",
+      "rows": 81046,
+      "detail": "parquet files in data/staging"
+    },
+    {
+      "ts": "2026-06-28T18:26:01.944267",
+      "table": "raw.dim_customer_raw",
+      "action": "load_raw",
+      "rows": 2000,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:26:01.944444",
+      "table": "raw.fact_transactions_raw",
+      "action": "load_raw",
+      "rows": 19399,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:26:01.944578",
+      "table": "raw.fact_product_events_raw",
+      "action": "load_raw",
+      "rows": 34705,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:26:07.555446",
+      "table": "staging.dim_customer_staged",
+      "action": "load_staging",
+      "rows": 2000,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:26:07.555674",
+      "table": "staging.fact_transactions_staged",
+      "action": "load_staging",
+      "rows": 19399,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:26:07.555813",
+      "table": "staging.fact_product_events_staged",
+      "action": "load_staging",
+      "rows": 34705,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:26:07.555939",
+      "table": "staging.fact_revenue_staged",
+      "action": "load_staging",
+      "rows": 17772,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:26:07.888914",
+      "table": "dim_customer",
+      "action": "load_warehouse",
+      "rows": 2000,
+      "detail": "TRUNCATE+INSERT idempotent"
+    },
+    {
+      "ts": "2026-06-28T18:26:08.182083",
+      "table": "fact_customer_journey",
+      "action": "load_warehouse",
+      "rows": 2000,
+      "detail": "TRUNCATE+INSERT idempotent"
+    },
+    {
+      "ts": "2026-06-28T18:26:11.051919",
+      "table": "fact_transactions",
+      "action": "load_warehouse",
+      "rows": 19399,
+      "detail": "TRUNCATE+INSERT idempotent"
+    },
+    {
+      "ts": "2026-06-28T18:26:15.304139",
+      "table": "fact_product_events",
+      "action": "load_warehouse",
+      "rows": 34705,
+      "detail": "TRUNCATE+INSERT idempotent"
+    },
+    {
+      "ts": "2026-06-28T18:26:17.196321",
+      "table": "fact_revenue",
+      "action": "load_warehouse",
+      "rows": 17772,
+      "detail": "TRUNCATE+INSERT idempotent"
+    },
+    {
+      "ts": "2026-06-28T18:26:17.388350",
+      "table": "fact_marketing",
+      "action": "load_warehouse",
+      "rows": 2000,
+      "detail": "TRUNCATE+INSERT idempotent"
+    },
+    {
+      "ts": "2026-06-28T18:26:17.535427",
+      "table": "fact_support",
+      "action": "load_warehouse",
+      "rows": 1077,
+      "detail": "TRUNCATE+INSERT idempotent"
+    },
+    {
+      "ts": "2026-06-28T18:26:17.753678",
+      "table": "fact_kyc_events",
+      "action": "load_warehouse",
+      "rows": 2093,
+      "detail": "TRUNCATE+INSERT idempotent"
+    }
+  ]
+}

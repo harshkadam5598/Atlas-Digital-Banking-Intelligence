@@ -1,0 +1,36 @@
+.atlas-kpi-slot {
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  padding: var(--atlas-space-3) var(--atlas-space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--atlas-space-1);
+  background: var(--atlas-bg);
+}
+
+.atlas-kpi-slot__label {
+  font-size: 12px;
+  color: var(--atlas-ink-muted);
+}
+
+.atlas-kpi-slot__value {
+  font-family: var(--atlas-font-mono);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--atlas-ink-faint);
+  line-height: 1.2;
+}
+
+.atlas-kpi-slot__value--empty {
+  color: var(--atlas-ink-faint);
+  font-weight: 400;
+}
+
+.atlas-kpi-slot__status {
+  font-size: 11px;
+  color: var(--atlas-ink-faint);
+}
+
+.atlas-kpi-slot__status--error {
+  color: var(--atlas-risk);
+}

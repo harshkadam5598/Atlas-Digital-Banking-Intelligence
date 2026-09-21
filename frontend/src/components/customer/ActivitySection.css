@@ -1,0 +1,11 @@
+.atlas-activity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--atlas-space-3);
+}
+
+@media (max-width: 720px) {
+  .atlas-activity-grid {
+    grid-template-columns: 1fr;
+  }
+}

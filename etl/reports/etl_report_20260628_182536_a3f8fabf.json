@@ -1,0 +1,191 @@
+{
+  "run_id": "20260628_182536_a3f8fabf",
+  "source_version": "v005_20260628_182535_seed42_pre_etl",
+  "started_at": "2026-06-28T18:25:36.402118",
+  "elapsed_seconds": 1.76,
+  "overall_status": "PASS_WITH_WARNINGS",
+  "data_quality_score": 100.0,
+  "summary": {
+    "rows_extracted": 81046,
+    "rows_transformed": 81046,
+    "rows_loaded": 0,
+    "rows_rejected": 0,
+    "dq_checks_passed": 94,
+    "dq_checks_failed": 0
+  },
+  "stages": {
+    "extract": {
+      "rows_in": 81046,
+      "rows_out": 81046,
+      "rows_rejected": 0,
+      "duration_s": 0.381,
+      "status": "PASS",
+      "warnings": [],
+      "errors": [],
+      "checks_passed": 8,
+      "checks_failed": 0
+    },
+    "transform": {
+      "rows_in": 81046,
+      "rows_out": 81046,
+      "rows_rejected": 0,
+      "duration_s": 1.039,
+      "status": "PASS",
+      "warnings": [],
+      "errors": [],
+      "checks_passed": 6,
+      "checks_failed": 0
+    },
+    "load": {
+      "rows_in": 81046,
+      "rows_out": 0,
+      "rows_rejected": 0,
+      "duration_s": 0.001,
+      "status": "PASS",
+      "warnings": [
+        "Database not available \u2014 load stage SKIPPED (dry-run mode)"
+      ],
+      "errors": [],
+      "checks_passed": 0,
+      "checks_failed": 0
+    },
+    "validate": {
+      "rows_in": 0,
+      "rows_out": 0,
+      "rows_rejected": 0,
+      "duration_s": 0.059,
+      "status": "PASS",
+      "warnings": [],
+      "errors": [],
+      "checks_passed": 80,
+      "checks_failed": 0
+    }
+  },
+  "warnings": [
+    "PostgreSQL not reachable \u2014 running in dry-run mode",
+    "Database not available \u2014 load stage SKIPPED (dry-run mode)",
+    "DB not available \u2014 database count verification skipped"
+  ],
+  "errors": [],
+  "audit_log": [
+    {
+      "ts": "2026-06-28T18:25:36.431801",
+      "table": "dim_customer",
+      "action": "extract",
+      "rows": 2000,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:36.446929",
+      "table": "fact_customer_journey",
+      "action": "extract",
+      "rows": 2000,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:36.463490",
+      "table": "fact_transactions",
+      "action": "extract",
+      "rows": 19399,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:36.746003",
+      "table": "fact_product_events",
+      "action": "extract",
+      "rows": 34705,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:36.766032",
+      "table": "fact_revenue",
+      "action": "extract",
+      "rows": 17772,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:36.773911",
+      "table": "fact_marketing",
+      "action": "extract",
+      "rows": 2000,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:36.779559",
+      "table": "fact_support",
+      "action": "extract",
+      "rows": 1077,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:36.787775",
+      "table": "fact_kyc_events",
+      "action": "extract",
+      "rows": 2093,
+      "detail": ""
+    },
+    {
+      "ts": "2026-06-28T18:25:36.865690",
+      "table": "dim_customer",
+      "action": "transform",
+      "rows": 2000,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:36.901485",
+      "table": "fact_customer_journey",
+      "action": "transform",
+      "rows": 2000,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:37.093021",
+      "table": "fact_transactions",
+      "action": "transform",
+      "rows": 19399,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:37.610543",
+      "table": "fact_product_events",
+      "action": "transform",
+      "rows": 34705,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:37.727444",
+      "table": "fact_revenue",
+      "action": "transform",
+      "rows": 17772,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:37.751861",
+      "table": "fact_marketing",
+      "action": "transform",
+      "rows": 2000,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:37.799671",
+      "table": "fact_support",
+      "action": "transform",
+      "rows": 1077,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:37.826954",
+      "table": "fact_kyc_events",
+      "action": "transform",
+      "rows": 2093,
+      "detail": "rejected=0"
+    },
+    {
+      "ts": "2026-06-28T18:25:38.104978",
+      "table": "staging",
+      "action": "write",
+      "rows": 81046,
+      "detail": "parquet files in data/staging"
+    }
+  ]
+}

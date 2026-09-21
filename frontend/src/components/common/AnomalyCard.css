@@ -1,0 +1,69 @@
+.atlas-anomaly-card {
+  padding: var(--atlas-space-3) 0;
+  border-bottom: 1px solid var(--atlas-border);
+}
+
+.atlas-anomaly-card:last-child {
+  border-bottom: none;
+}
+
+.atlas-anomaly-card__top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--atlas-space-2);
+  margin-bottom: var(--atlas-space-2);
+}
+
+.atlas-anomaly-card__deviation {
+  margin-left: auto;
+  font-family: var(--atlas-font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--atlas-ink);
+}
+
+.atlas-anomaly-card__reason {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--atlas-ink);
+  margin-bottom: var(--atlas-space-2);
+}
+
+.atlas-anomaly-card__values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--atlas-space-4);
+  font-size: 12px;
+  color: var(--atlas-ink-muted);
+  font-family: var(--atlas-font-mono);
+  margin-bottom: var(--atlas-space-2);
+}
+
+.atlas-anomaly-card__values strong {
+  color: var(--atlas-ink);
+  font-weight: 600;
+}
+
+.atlas-anomaly-card__date {
+  margin-left: auto;
+  color: var(--atlas-ink-faint);
+}
+
+.atlas-anomaly-card__impact {
+  font-size: 12px;
+  color: var(--atlas-ink-muted);
+  margin-bottom: 2px;
+}
+
+.atlas-anomaly-card__investigation {
+  font-size: 12px;
+  color: var(--atlas-ink-faint);
+}
+
+@media (max-width: 640px) {
+  .atlas-anomaly-card__deviation,
+  .atlas-anomaly-card__date {
+    margin-left: 0;
+  }
+}

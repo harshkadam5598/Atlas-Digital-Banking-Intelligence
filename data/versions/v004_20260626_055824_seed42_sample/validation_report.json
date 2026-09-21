@@ -1,0 +1,171 @@
+{
+  "summary": {
+    "passed": 24,
+    "failed": 8,
+    "total": 32
+  },
+  "generated_at": "2026-06-26T05:58:24.925269",
+  "generator_version": "1.1",
+  "checks": [
+    {
+      "label": "dim_customer.customer_id NOT NULL",
+      "passed": true,
+      "detail": "0 nulls"
+    },
+    {
+      "label": "dim_customer.signup_date NOT NULL",
+      "passed": true,
+      "detail": "0 nulls"
+    },
+    {
+      "label": "dim_customer.kyc_status NOT NULL",
+      "passed": true,
+      "detail": "0 nulls"
+    },
+    {
+      "label": "dim_customer.lifecycle_stage NOT NULL",
+      "passed": true,
+      "detail": "0 nulls"
+    },
+    {
+      "label": "kyc_status valid enum",
+      "passed": true,
+      "detail": "0 invalid"
+    },
+    {
+      "label": "lifecycle_stage valid enum",
+      "passed": true,
+      "detail": "0 invalid"
+    },
+    {
+      "label": "transactions.status valid enum",
+      "passed": true,
+      "detail": "0 invalid"
+    },
+    {
+      "label": "transactions.fee_amount_gbp non-negative",
+      "passed": true,
+      "detail": "0 negative fees"
+    },
+    {
+      "label": "BR-001: lifecycle date ordering",
+      "passed": true,
+      "detail": "checked 1,421 customers"
+    },
+    {
+      "label": "BR-002: KYC approved 80\u201384%",
+      "passed": true,
+      "detail": "actual=0.8250"
+    },
+    {
+      "label": "BR-002: KYC rejected 6\u201310%",
+      "passed": true,
+      "detail": "actual=0.0700"
+    },
+    {
+      "label": "BR-008: only approved customers activate",
+      "passed": true,
+      "detail": "1,421 activated"
+    },
+    {
+      "label": "BR-009: premium products only for premium customers",
+      "passed": true,
+      "detail": "enforced at generation \u2014 premium products gated in adopt logic"
+    },
+    {
+      "label": "Premium conversion 14\u201326% (target 20%)",
+      "passed": true,
+      "detail": "actual=0.2034 (20.34%)"
+    },
+    {
+      "label": "GB market share 26\u201332%",
+      "passed": true,
+      "detail": "actual=0.3050"
+    },
+    {
+      "label": "Failed txn rate 1.5\u20134.0%",
+      "passed": true,
+      "detail": "actual=0.0236"
+    },
+    {
+      "label": "Churn proportion 10\u201385%",
+      "passed": true,
+      "detail": "actual=0.7030"
+    },
+    {
+      "label": "All 4 fraud event types present",
+      "passed": true,
+      "detail": "found: {'suspicious_transfer', 'fraud_flagged', 'chargeback', 'fraud_cleared'}"
+    },
+    {
+      "label": "fraud_flagged events present",
+      "passed": true,
+      "detail": "183 rows"
+    },
+    {
+      "label": "fraud_cleared events present",
+      "passed": true,
+      "detail": "144 rows"
+    },
+    {
+      "label": "suspicious_transfer events present",
+      "passed": true,
+      "detail": "1 rows"
+    },
+    {
+      "label": "chargeback events present",
+      "passed": true,
+      "detail": "15 rows"
+    },
+    {
+      "label": "fraud_cleared/flagged ratio 65\u201390%",
+      "passed": true,
+      "detail": "actual=0.787 (78.7%)"
+    },
+    {
+      "label": "fraud_flagged rate 0.4\u20131.5% of completed txns",
+      "passed": true,
+      "detail": "actual=0.0097"
+    },
+    {
+      "label": "dim_customer row count",
+      "passed": false,
+      "detail": "actual=2,000 | expected\u2248500 \u00b10%"
+    },
+    {
+      "label": "fact_customer_journey row count",
+      "passed": false,
+      "detail": "actual=2,000 | expected\u2248500 \u00b10%"
+    },
+    {
+      "label": "fact_transactions row count",
+      "passed": false,
+      "detail": "actual=19,399 | expected\u22487,200 \u00b18%"
+    },
+    {
+      "label": "fact_product_events row count",
+      "passed": false,
+      "detail": "actual=34,705 | expected\u224811,517 \u00b18%"
+    },
+    {
+      "label": "fact_revenue row count",
+      "passed": false,
+      "detail": "actual=17,772 | expected\u22482,100 \u00b110%"
+    },
+    {
+      "label": "fact_marketing row count",
+      "passed": false,
+      "detail": "actual=2,000 | expected\u2248500 \u00b10%"
+    },
+    {
+      "label": "fact_support row count",
+      "passed": false,
+      "detail": "actual=1,077 | expected\u2248130 \u00b125%"
+    },
+    {
+      "label": "fact_kyc_events row count",
+      "passed": false,
+      "detail": "actual=2,093 | expected\u2248560 \u00b16%"
+    }
+  ]
+}

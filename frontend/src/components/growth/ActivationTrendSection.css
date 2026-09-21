@@ -1,0 +1,10 @@
+.atlas-activation-section__headline {
+  max-width: 280px;
+  margin-bottom: var(--atlas-space-3);
+}
+
+.atlas-activation-section__note {
+  margin-top: var(--atlas-space-2);
+  font-size: 11px;
+  color: var(--atlas-ink-faint);
+}

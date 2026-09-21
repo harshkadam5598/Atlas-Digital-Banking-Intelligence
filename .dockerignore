@@ -1,0 +1,48 @@
+# ============================================================
+# Atlas — Docker build context exclusions
+# ============================================================
+# Backend Dockerfile build context is the repo root (see
+# deployment/docker/docker-compose.yml: context: ../..). None of
+# the entries below are imported or read by the FastAPI app at
+# build or run time — the app imports backend/ and analytics/
+# only, and data/ is volume-mounted at runtime rather than baked
+# into the image. Nothing the backend actually needs is excluded.
+
+# ─── Version control ────────────────────────────────────────
+.git/
+.gitignore
+
+# ─── Frontend (not needed in the backend image) ─────────────
+frontend/
+
+# ─── Python ──────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# ─── Generated data (volume-mounted at runtime, not baked in) ─
+data/raw/*.csv
+data/raw/*.parquet
+data/staging/*.csv
+data/staging/*.parquet
+logs/
+
+# ─── Environment / local secrets ────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ─── Editor / OS cruft ───────────────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+
+# ─── Docs / non-runtime content (kept out of the image only —
+#     not deleted, not excluded from git) ────────────────────
+docs/
+notebooks/

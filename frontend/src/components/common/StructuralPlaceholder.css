@@ -1,0 +1,12 @@
+.atlas-structural-placeholder {
+  border: 1px dashed var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  padding: var(--atlas-space-6) var(--atlas-space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--atlas-ink-faint);
+  font-size: 13px;
+  min-height: 120px;
+}

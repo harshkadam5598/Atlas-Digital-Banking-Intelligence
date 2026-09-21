@@ -1,0 +1,29 @@
+-- ============================================================
+-- Atlas – Alembic/Flyway Style Migration
+-- Version: V2.0.0
+-- Description: Initial warehouse star schema
+-- Author: Atlas Engineering
+-- Sprint: 2
+-- ============================================================
+-- This file documents the full Sprint 2 migration.
+-- Files are applied in order:
+--   1. 00_schemas.sql
+--   2. 01_dimensions.sql
+--   3. 02_facts.sql
+--   4. 03_pipeline_tables.sql
+--   5. 04_seed_data.sql
+--   6. 05_functions.sql
+--   (then) indexes/01_performance_indexes.sql
+--   (then) views/01_analytics_views.sql
+--   (then) validation/sprint2_validation.sql
+-- ============================================================
+
+-- Execution order is managed by scripts/db_init.sh
+-- This file serves as migration documentation and rollback reference.
+
+-- ROLLBACK (if needed):
+-- DROP SCHEMA analytics CASCADE;
+-- DROP SCHEMA warehouse CASCADE;
+-- DROP SCHEMA staging CASCADE;
+-- DROP SCHEMA raw CASCADE;
+-- DROP SCHEMA pipeline CASCADE;

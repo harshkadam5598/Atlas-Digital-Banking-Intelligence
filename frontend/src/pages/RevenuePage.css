@@ -1,0 +1,23 @@
+.atlas-revenue-page__kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--atlas-space-3);
+}
+
+@media (max-width: 1024px) {
+  .atlas-revenue-page__kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .atlas-revenue-page__kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.atlas-revenue-page__note {
+  margin-top: var(--atlas-space-3);
+  font-size: 11px;
+  color: var(--atlas-ink-faint);
+}

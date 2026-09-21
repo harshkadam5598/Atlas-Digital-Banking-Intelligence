@@ -1,0 +1,17 @@
+{
+  "version_id": "v002_20260625_211847_seed42_sprint3_final",
+  "created_at": "2026-06-25T21:18:48.259855",
+  "generator_version": "1.2",
+  "seed": 42,
+  "row_counts": {
+    "dim_customer": 2000,
+    "fact_support": 1077,
+    "fact_revenue": 17772,
+    "fact_transactions": 19399,
+    "fact_marketing": 2000,
+    "fact_customer_journey": 2000,
+    "fact_kyc_events": 2093,
+    "fact_product_events": 34705
+  },
+  "source": "snapshot_raw"
+}

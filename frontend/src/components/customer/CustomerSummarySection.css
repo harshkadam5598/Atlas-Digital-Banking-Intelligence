@@ -1,0 +1,17 @@
+.atlas-customer-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--atlas-space-3);
+}
+
+@media (max-width: 1024px) {
+  .atlas-customer-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .atlas-customer-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "source_version": "v003_20260626_055700_seed42_sprint3_approved",
+  "promoted_at": "2026-06-26T05:58:31.133338",
+  "files": [
+    "dim_customer.parquet",
+    "fact_support.parquet",
+    "fact_revenue.parquet",
+    "fact_transactions.parquet",
+    "fact_marketing.parquet",
+    "fact_customer_journey.parquet",
+    "fact_kyc_events.parquet",
+    "fact_product_events.parquet"
+  ]
+}

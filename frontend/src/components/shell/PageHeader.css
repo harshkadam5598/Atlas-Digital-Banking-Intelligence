@@ -1,0 +1,25 @@
+.atlas-page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--atlas-space-4);
+  margin-bottom: var(--atlas-space-5);
+}
+
+.atlas-page-header__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--atlas-ink);
+  letter-spacing: -0.01em;
+}
+
+.atlas-page-header__description {
+  margin-top: var(--atlas-space-1);
+  font-size: 13px;
+  color: var(--atlas-ink-muted);
+  max-width: 60ch;
+}
+
+.atlas-page-header__actions {
+  flex-shrink: 0;
+}

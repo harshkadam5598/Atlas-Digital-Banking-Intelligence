@@ -1,0 +1,18 @@
+.atlas-customer-value-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--atlas-space-3);
+}
+
+.atlas-customer-value-section__note {
+  margin-top: var(--atlas-space-3);
+  font-size: 11px;
+  color: var(--atlas-ink-faint);
+  line-height: 1.5;
+}
+
+@media (max-width: 720px) {
+  .atlas-customer-value-section__grid {
+    grid-template-columns: 1fr;
+  }
+}

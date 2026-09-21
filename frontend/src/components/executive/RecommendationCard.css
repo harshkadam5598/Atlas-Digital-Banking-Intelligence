@@ -1,0 +1,34 @@
+.atlas-recommendation-card {
+  padding: var(--atlas-space-3) 0;
+  border-bottom: 1px solid var(--atlas-border);
+}
+
+.atlas-recommendation-card:last-child {
+  border-bottom: none;
+}
+
+.atlas-recommendation-card__top {
+  display: flex;
+  align-items: center;
+  gap: var(--atlas-space-2);
+  margin-bottom: var(--atlas-space-2);
+}
+
+.atlas-recommendation-card__title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--atlas-ink);
+  margin-bottom: 2px;
+}
+
+.atlas-recommendation-card__rationale {
+  font-size: 12px;
+  color: var(--atlas-ink-muted);
+  margin-bottom: var(--atlas-space-1);
+}
+
+.atlas-recommendation-card__impact {
+  font-size: 12px;
+  color: var(--atlas-ink-faint);
+  font-family: var(--atlas-font-mono);
+}

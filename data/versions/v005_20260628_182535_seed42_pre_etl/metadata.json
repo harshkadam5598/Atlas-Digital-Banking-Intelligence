@@ -1,0 +1,17 @@
+{
+  "version_id": "v005_20260628_182535_seed42_pre_etl",
+  "created_at": "2026-06-28T18:25:36.388245",
+  "generator_version": "1.2",
+  "seed": 42,
+  "row_counts": {
+    "dim_customer": 2000,
+    "fact_support": 1077,
+    "fact_revenue": 17772,
+    "fact_transactions": 19399,
+    "fact_marketing": 2000,
+    "fact_customer_journey": 2000,
+    "fact_kyc_events": 2093,
+    "fact_product_events": 34705
+  },
+  "source": "snapshot_raw"
+}

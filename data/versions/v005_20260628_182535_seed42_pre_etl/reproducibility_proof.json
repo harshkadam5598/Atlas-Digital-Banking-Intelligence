@@ -1,0 +1,25 @@
+{
+  "seed": 42,
+  "generator_version": "1.1",
+  "generated_at": "2026-06-26T05:58:24.889889",
+  "fingerprints": {
+    "dim_customer": "21c94e3e94aa805462a1fc9f72c857046fbada0710ca2ac2f40e2e47d5ee2372",
+    "fact_kyc_events": "d592cfba78fee1d31a824dd7d9d657f3589e254d6bb72a7138f1b8325ca94356",
+    "fact_marketing": "04192e0137b2498d442397a46454110963d26ee1e7dc5d62df83511a41683c91",
+    "fact_transactions": "83e886a1dff6b5c41d082c3daee196b9add304e1504db502f36d9abd8ccd287c",
+    "fact_product_events": "5087c703c0a8c6126f316f2760b1c7b25e32821555fb8bc924f0829083e21418",
+    "fact_support": "82e26c726d67df8448dfd87eda6e519c04b0120a4c047a77ae314c32bb509bdd",
+    "fact_customer_journey": "4720ae0d845011ec98bb97b68adc270461a57a6d53df6785c7456916684563f2",
+    "fact_revenue": "9db381a4812260acb8f46a7558b24cab2bc1d354ba53ceec2bb348404c1e7899"
+  },
+  "row_counts": {
+    "dim_customer": 2000,
+    "fact_kyc_events": 2093,
+    "fact_marketing": 2000,
+    "fact_transactions": 19399,
+    "fact_product_events": 34705,
+    "fact_support": 1077,
+    "fact_customer_journey": 2000,
+    "fact_revenue": 17772
+  }
+}

@@ -1,0 +1,47 @@
+/*
+  Atlas Design Tokens
+  Enterprise fintech visual language — instrument-panel clarity over
+  decorative SaaS styling. Light workspace surface, hairline borders
+  instead of soft shadows, a single restrained accent, and monospace
+  reserved for figures/data so numbers read as measurements rather
+  than decoration.
+*/
+
+:root {
+  /* Core palette */
+  --atlas-bg: #f4f5f7;
+  --atlas-surface: #ffffff;
+  --atlas-border: #e1e4ea;
+  --atlas-ink: #10192e;
+  --atlas-ink-muted: #5b6472;
+  --atlas-ink-faint: #8991a0;
+  --atlas-accent: #1e3a8a;
+  --atlas-accent-soft: #eaeffb;
+
+  /* Semantic status */
+  --atlas-positive: #1f7a54;
+  --atlas-positive-soft: #e8f4ee;
+  --atlas-risk: #b23a2e;
+  --atlas-risk-soft: #fbeeec;
+  --atlas-caution: #92640a;
+  --atlas-caution-soft: #f8f0e0;
+
+  /* Typography */
+  --atlas-font-ui: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --atlas-font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* Layout */
+  --atlas-sidebar-width: 248px;
+  --atlas-topbar-height: 56px;
+  --atlas-radius: 4px;
+  --atlas-radius-lg: 6px;
+
+  /* Spacing scale (4px base) */
+  --atlas-space-1: 4px;
+  --atlas-space-2: 8px;
+  --atlas-space-3: 12px;
+  --atlas-space-4: 16px;
+  --atlas-space-5: 24px;
+  --atlas-space-6: 32px;
+  --atlas-space-7: 48px;
+}

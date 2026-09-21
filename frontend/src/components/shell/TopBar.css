@@ -1,0 +1,65 @@
+.atlas-topbar {
+  height: var(--atlas-topbar-height);
+  display: flex;
+  align-items: center;
+  gap: var(--atlas-space-3);
+  padding: 0 var(--atlas-space-5);
+  background: var(--atlas-surface);
+  border-bottom: 1px solid var(--atlas-border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.atlas-topbar__menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius);
+  background: var(--atlas-surface);
+  color: var(--atlas-ink-muted);
+  cursor: pointer;
+}
+
+.atlas-topbar__spacer {
+  flex: 1;
+}
+
+.atlas-topbar__meta {
+  display: flex;
+  align-items: baseline;
+  gap: var(--atlas-space-2);
+}
+
+.atlas-topbar__meta-label {
+  font-size: 12px;
+  color: var(--atlas-ink-faint);
+}
+
+.atlas-topbar__meta-value {
+  font-family: var(--atlas-font-mono);
+  font-size: 12px;
+  color: var(--atlas-ink-muted);
+}
+
+.atlas-topbar__user {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--atlas-accent-soft);
+  color: var(--atlas-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .atlas-topbar__menu {
+    display: flex;
+  }
+}

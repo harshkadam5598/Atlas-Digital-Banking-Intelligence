@@ -1,0 +1,30 @@
+.atlas-section-card {
+  background: var(--atlas-surface);
+  border: 1px solid var(--atlas-border);
+  border-radius: var(--atlas-radius-lg);
+  margin-bottom: var(--atlas-space-5);
+}
+
+.atlas-section-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--atlas-space-3);
+  padding: var(--atlas-space-4) var(--atlas-space-4) 0;
+}
+
+.atlas-section-card__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--atlas-ink);
+}
+
+.atlas-section-card__description {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--atlas-ink-muted);
+}
+
+.atlas-section-card__body {
+  padding: var(--atlas-space-4);
+}

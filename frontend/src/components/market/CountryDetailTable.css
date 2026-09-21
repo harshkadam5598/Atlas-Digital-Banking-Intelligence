@@ -1,0 +1,68 @@
+.atlas-country-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.atlas-country-table__header,
+.atlas-country-table__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--atlas-space-3);
+  padding: var(--atlas-space-2) 0;
+  border-bottom: 1px solid var(--atlas-border);
+}
+
+.atlas-country-table__row:last-child {
+  border-bottom: none;
+}
+
+.atlas-country-table__header {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--atlas-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid var(--atlas-ink-muted);
+}
+
+.atlas-country-table__row {
+  font-family: var(--atlas-font-mono);
+  font-size: 13px;
+  color: var(--atlas-ink);
+  align-items: center;
+}
+
+.atlas-country-table__row > span:first-child {
+  font-family: var(--atlas-font-ui);
+  font-weight: 500;
+}
+
+.atlas-country-table__growth--positive {
+  color: var(--atlas-positive);
+}
+
+.atlas-country-table__growth--negative {
+  color: var(--atlas-risk);
+}
+
+.atlas-country-table__unavailable {
+  font-family: var(--atlas-font-ui);
+  color: var(--atlas-ink-faint);
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .atlas-country-table__header,
+  .atlas-country-table__row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .atlas-country-table__header {
+    display: none;
+  }
+
+  .atlas-country-table__row {
+    padding: var(--atlas-space-3) 0;
+  }
+}

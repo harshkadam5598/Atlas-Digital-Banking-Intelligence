@@ -1,0 +1,58 @@
+.atlas-market-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--atlas-space-3);
+  margin-bottom: var(--atlas-space-3);
+}
+
+@media (max-width: 720px) {
+  .atlas-market-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.atlas-market-country-list {
+  margin: 0 0 var(--atlas-space-3);
+  display: flex;
+  flex-direction: column;
+}
+
+.atlas-market-country-list > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--atlas-space-2) 0;
+  border-bottom: 1px solid var(--atlas-border);
+}
+
+.atlas-market-country-list > div:last-child {
+  border-bottom: none;
+}
+
+.atlas-market-country-list dt {
+  font-size: 12px;
+  color: var(--atlas-ink-muted);
+}
+
+.atlas-market-country-list dd {
+  margin: 0;
+  font-family: var(--atlas-font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--atlas-ink);
+}
+
+.atlas-market-note {
+  font-size: 11px;
+  color: var(--atlas-ink-faint);
+  line-height: 1.5;
+}
+
+.atlas-market-anomalies-heading {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--atlas-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: var(--atlas-space-4) 0 var(--atlas-space-2);
+}

@@ -1,0 +1,32 @@
+.atlas-operations-note {
+  margin-top: var(--atlas-space-2);
+  font-family: var(--atlas-font-mono);
+  font-size: 12px;
+  color: var(--atlas-ink-muted);
+}
+
+.atlas-operations-target {
+  font-size: 11px;
+  color: var(--atlas-ink-faint);
+}
+
+.atlas-operations-anomalies-heading {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--atlas-ink-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: var(--atlas-space-4) 0 var(--atlas-space-2);
+}
+
+.atlas-operations-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--atlas-space-5);
+}
+
+@media (max-width: 720px) {
+  .atlas-operations-two-col {
+    grid-template-columns: 1fr;
+  }
+}
